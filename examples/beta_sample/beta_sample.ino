@@ -6,9 +6,9 @@ CAN_message_t msg;
 
 void setup(void) {
   can1.begin();
-  can1.setBaudRate(250000);
+  can1.setBaudRate(1000000);
   can2.begin();
-  can2.setBaudRate(250000);
+  can2.setBaudRate(1000000);
 }
 
 void loop() {

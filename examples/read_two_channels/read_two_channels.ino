@@ -1,4 +1,6 @@
+#include <Arduino.h>
 #include <FlexCAN_T4.h>
+
 
 FlexCAN_T4<CAN1, RX_SIZE_256, TX_SIZE_16> can1;
 FlexCAN_T4<CAN2, RX_SIZE_256, TX_SIZE_16> can2;
@@ -9,11 +11,12 @@ void setup(void) {
   can1.setBaudRate(250000);
   can2.begin();
   can2.setBaudRate(250000);
+  Serial.println("@@@@@@@@@@@@@@@@@@@@@@@"); 
 }
 
 void loop() {
   
-
+  Serial.println("@@@@@@@@@@@@@@@@@@@@@@@"); 
   if ( can1.read(msg) ) {
     Serial.print("CAN1 "); 
     Serial.print("MB: "); Serial.print(msg.mb);
